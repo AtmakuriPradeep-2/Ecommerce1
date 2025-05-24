@@ -1,0 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'seller') {
+    header("Location: ../landingpage.php");
+    exit();
+}
+?>
+<h1>Seller Dashboard</h1>
+<p>Welcome, <?= $_SESSION['username']; ?>. You can now list products for sale.</p>

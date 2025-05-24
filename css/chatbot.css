@@ -1,0 +1,94 @@
+/* Small and Floating Chatbot Icon */
+.chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;  /* Small Size */
+    height: 50px;
+    background-color: #ff9f00; /* Flipkart Orange */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    animation: float 2s infinite ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.chatbot-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Chatbot Icon Image */
+.chatbot-icon img {
+    width: 30px;  /* Smaller Icon */
+    height: 30px;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* Chat Window */
+.chat-window {
+    position: fixed;
+    bottom: 80px; /* Adjusted for small icon */
+    right: 20px;
+    width: 280px;
+    background: white;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+/* Chat Header */
+.chat-header {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Chat Close Button */
+.chat-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Chat Footer */
+.chat-footer {
+    padding: 10px;
+    display: flex;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+#send-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
